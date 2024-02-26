@@ -19,14 +19,14 @@
     <form action="script.php">
         <lable class="l3">Factory</lable>
         <input type="text" name="factory" class="factoryhm"><br><br>
-         <lable class="l1">Team Numer</lable>
+         <lable class="l1">Team Number</lable>
         <input type="text" name="teamnum" class="teamnumhome"><br><br>
         <lable class="l2">Style Number</lable>
         <input type ="text" name="stylenum" class="stylenhm"><br><br>
         <input type="submit" name="search" value="Search" class="search">
     </form>
         
-     <a href="addnew.html" ><button type="button"  class="homebtn">NEW</button></a>
+     <a href="addnew.php" ><button type="button"  class="homebtn">NEW</button></a>
     
     
 </body>

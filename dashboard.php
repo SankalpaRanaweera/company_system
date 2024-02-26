@@ -7,536 +7,536 @@
     <link href="allcss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body bgcolor="gray">
-    <form action="script.php" method="post">
-        <?php
-        $id=$_GET['id'];
-        $sql1="SELECT * FROM first where teamnum='$team' AND stylenum='$style' AND factory='$factory'";
-        $res=mysqli_query($con,$sql);
+<?php
+        $sql= "SELECT * from stat crew where Team_no='$team' AND Style_no='$style' AND factory='$factory'";
+        $res = mysqli_query($con,$sql);
+        if(mysqli_num_rows($res)>0){
+            while($span=mysqli_fetch_assoc($res)){
 
-        if(mysqli-num-rows($res)>0){
-            $row=mysqli_fetch_asssoc($res);
-        }
-            ?>
-        <lable>Factory</lable>
-        <input type="text" name="factory" class="f9"><br><br>
-        <lable>Team Num</lable>
-        <input type="text" name="teamnum" class="f1"><br><br>
-        <lable>Style Num</lable>
-        <input type="text" name="stylenum" class="f2"><br><br>
-        <lable>Production Start Date</lable>
-        <input type="date" name="startdate" class="f3"><br><br>
-        <lable>QCD</lable>
-        <input type="text" name="qcd" class="f4"><br><br>
-        <lable>Product Basket</lable>
-        <select name="PB" class="f8">
-             <option value="a">a</option>
-             <option value="a">a</option>
-             <option value="a">a</option>
-        </select>
-        <br><br>
-        <label>Chassies</label>
-        <input type="text" name="chasy1" class="f5">
-        <input type="text" name="chasy2" class="f6">
-        <input type="text" name="chasy3" class="f7">
-        <table border="1">
-            <tr>
-                <th>Number</th>
-                <th>Day</th>
-                <th>Day types</th>
-                <th>Activity</th>
-                <th>Main Responsibility</th>
-                <th>Team</th>
-                <th>Person</th>
-                <th>Activity</th>
-                <th>Date</th>
-                <th>Root Cause</th>
+            }}
+    echo"<form action="script.php" method="post">";
+    echo "<lable>Factory</lable>";
+     echo"<input type="text" name="factory" class="f9"><br><br>";
+    echo "<lable>Team Num</lable>";
+    echo"<input type="text" name="teamnum" class="f1"><br><br>";
+    echo"<lable>Style Num</lable>";
+    echo"<input type="text" name="stylenum" class="f2"><br><br>";
+    echo"<lable>Production Start Date</lable>";
+    echo"<input type="date" name="startdate" class="f3"><br><br>";
+    echo"<lable>QCD</lable>";
+    echo"<input type="text" name="qcd" class="f4"><br><br>";
+    echo"<lable>Product Basket</lable>";
+    echo"<select name="PB" class="f8">";
+        echo"<option value="a">a</option>";
+        echo"<option value="a">a</option>";
+        echo"<option value="a">a</option>";
+        echo"</select>";
+        echo"<br><br>";
+        echo"<label>Chassies</label>";
+        echo" <input type="text" name="chasy1" class="f5">";
+        echo"<input type="text" name="chasy2" class="f6">";
+        echo"<input type="text" name="chasy3" class="f7">";
+    echo"<table border="1">";
+    echo "<tr>";
+    echo"<th>Number</th>";
+    echo"<th>Day</th>";
+    echo "<th>Day types</th>";
+    echo"<th>Activity</th>";
+    echo"<th>Main Responsibility</th>";
+    echo"<th>Team</th>";
+    echo"<th>Person</th>";
+    echo"<th>Activity</th>";
+    echo"<th>Date</th>";
+    echo"<th>Root Cause</th>";
 
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>13Day</td>
-                <td>13D</td>
-                <td>Planned styles material in house</td>
-                <td>MERCH </td>
-                <td>Merch</td>
-                <td> <input type="text" name="1.1" class="1.1"></td>
-                <td><select name="1.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="1.3" class="1.3"></td>
-                <td><input type="text" name="1.4" class="1.4"></td>
+    echo "</tr>";
+    echo   "<tr>"
+    echo    " <td>1</td>";
+    echo        "<td>13Day</td>";
+    echo        "<td>13D</td>";
+    echo        "<td>Planned styles material in house</td>";
+    echo        "<td>MERCH </td>";
+    echo        "<td>Merch</td>";
+    echo        <td> <input type="text" name="1.1" class="1.1"></td>;
+    echo        <td><select name="1.2">;
+    echo            <option value="N/A">N/A</option>;
+    echo            <option value="NO">NO</option>;
+    echo            <option value="YES">YES</option>;
+    echo        </select></td>;
+    echo        <td><input type="date" name="1.3" class="1.3"></td>;
+    echo        <td><input type="text" name="1.4" class="1.4"></td>;
 
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>13Day</td>
-                <td>13D</td>
-                <td>Freez th plan</td>
-                <td>PLAN</td>
-                <td>Plan</td>
-                <td> <input type="text" name="2.1" class="2.1"></td>
-                <td><select name="2.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="2.3" class="2.3"></td>
-                <td><input type="text" name="2.4" class="2.4"></td>
+    echo    </tr>
+    
+    echo    <tr>
+    echo        <td>2</td>
+    echo        <td>13Day</td>
+    echo        <td>13D</td>
+    echo        <td>Freez th plan</td>
+    echo        <td>PLAN</td>
+    echo        <td>Plan</td>
+    echo        <td> <input type="text" name="2.1" class="2.1"></td>
+    echo        <td><select name="2.2">
+    echo            <option value="N/A">N/A</option>
+    echo            <option value="NO">NO</option>
+    echo            <option value="YES">YES</option>
+    echo        </select></td>
+    echo        <td><input type="date" name="2.3" class="2.3"></td>
+    echo        <td><input type="text" name="2.4" class="2.4"></td>
 
 
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>13Day</td>
-                <td>13D</td>
-                <td>sample recevive </td>
-                <td>TEC </td>
-                <td>(FN)-Pilot Evaluator </td>
-                <td> <input type="text" name="3.1" class="3.1"></td>
-                <td><select name="3.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="3.3" class="3.3"></td>
-                <td><input type="text" name="3.4" class="3.4"></td>
+    echo    </tr>
+    echo    <tr>
+    echo        <td>3</td>
+    echo        <td>13Day</td>
+    echo        <td>13D</td>
+    echo        <td>sample recevive </td>
+    echo        <td>TEC </td>
+    echo        <td>(FN)-Pilot Evaluator </td>
+    echo        <td> <input type="text" name="3.1" class="3.1"></td>
+    echo        <td><select name="3.2">
+    echo            <option value="N/A">N/A</option>
+    echo            <option value="NO">NO</option>
+    echo            <option value="YES">YES</option>
+    echo        </select></td>
+    echo        <td><input type="date" name="3.3" class="3.3"></td>
+    echo        <td><input type="text" name="3.4" class="3.4"></td>
                 
                 
 
-            </tr>
+    echo    </tr>
 
-            <tr>
-                <td>4</td>
-                <td>13Day</td>
-                <td>13D</td>
-                <td>patter received </td>
-                <td>TEC </td>
-                <td>Pilot Evaluator(FN)</td>
-                <td> <input type="text" name="4.1" class="4.1"></td>
-                <td><select name="4.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="4.3" class="4.3"></td>
-                <td><input type="text" name="4.4" class="4.4"></td>
+    echo    <tr>
+    echo        <td>4</td>
+    echo        <td>13Day</td>
+    echo        <td>13D</td>
+    echo        <td>patter received </td>
+    echo        <td>TEC </td>
+    echo        <td>Pilot Evaluator(FN)</td>
+    echo        <td> <input type="text" name="4.1" class="4.1"></td>
+    echo        <td><select name="4.2">
+    echo            <option value="N/A">N/A</option>
+    echo             <option value="NO">NO</option>
+    echo            <option value="NO">NO</option>
+    echo            <option value="NO">NO</option>
+    echo            <option value="YES">YES</option>
+    echo         </select></td>
+    echo        <td><input type="date" name="4.3" class="4.3"></td>
+    echo        <td><input type="text" name="4.4" class="4.4"></td>
 
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>13Day</td>
-                <td>13D</td>
-                <td>2 pc cut pannels </td>
-                <td>TEC </td>
-                <td>Tech/ Pilot Evaluator (FN) </td>
-                <td> <input type="text" name="5.1" class="5.1"></td>
-                <td><select name="5.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="5.3" class="5.3"></td>
-                <td><input type="text" name="5.4" class="5.4"></td>
+    echo    </tr>
+    echo    <tr>
+    echo        <td>5</td>
+    echo        <td>13Day</td>
+    echo        <td>13D</td>
+    echo        <td>2 pc cut pannels </td>
+    echo        <td>TEC </td>
+    echo        <td>Tech/ Pilot Evaluator (FN) </td>
+    echo        <td> <input type="text" name="5.1" class="5.1"></td>
+    echo        <td><select name="5.2">
+    echo            <option value="N/A">N/A</option>
+    echo            <option value="NO">NO</option>
+    echo            <option value="YES">YES</option>
+    echo        </select></td>
+    echo        <td><input type="date" name="5.3" class="5.3"></td>
+    echo        <td><input type="text" name="5.4" class="5.4"></td>
 
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>10Day</td>
-                <td>10D</td>
-                <td>Standard Vedio sharig</td>
-                <td>IE</td>
-                <td>COST IE \G.TECH </td>
-                <td> <input type="text" name="6.1" class="6.1"></td>
-                <td><select name="6.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="6.3" class="6.3"></td>
-                <td><input type="text" name="6.4" class="6.4"></td>
+    echo    </tr>
+    echo    <tr>
+    echo        <td>6</td>
+    echo        <td>10Day</td>
+    echo        <td>10D</td>
+    echo        <td>Standard Vedio sharig</td>
+    echo        <td>IE</td>
+          echo      <td>COST IE \G.TECH </td>
+          echo      <td> <input type="text" name="6.1" class="6.1"></td>
+          echo      <td><select name="6.2">
+          echo          <option value="N/A">N/A</option>
+          echo          <option value="NO">NO</option>
+          echo          <option value="YES">YES</option>
+          echo      </select></td>
+          echo      <td><input type="date" name="6.3" class="6.3"></td>
+          echo      <td><input type="text" name="6.4" class="6.4"></td>
 
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>10Day</td>
-                <td>10D</td>
-                <td>method video</td>
-                <td>IE </td>
-                <td>COST IE \G.TECH </td>
-                <td> <input type="text" name="7.1" class="7.1"></td>
-                <td><select name="7.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="7.3" class="7.3"></td>
-                <td><input type="text" name="7.4" class="7.4"></td>
+          echo  </tr>
+          echo  <tr>
+          echo      <td>7</td>
+          echo      <td>10Day</td>
+          echo      <td>10D</td>
+          echo      <td>method video</td>
+          echo      <td>IE </td>
+          echo      <td>COST IE \G.TECH </td>
+          echo      <td> <input type="text" name="7.1" class="7.1"></td>
+          echo      <td><select name="7.2">
+          echo          <option value="N/A">N/A</option>
+          echo          <option value="NO">NO</option>
+          echo          <option value="YES">YES</option>
+          echo      </select></td>
+          echo      <td><input type="date" name="7.3" class="7.3"></td>
+          echo      <td><input type="text" name="7.4" class="7.4"></td>
 
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>10Day</td>
-                <td>10D</td>
-                <td>Risk Analysis meeting </td>
-                <td>TEC </td>
-                <td>Tech \ IE \ Mech </td>
-                <td> <input type="text" name="8.1" class="8.1"></td>
-                <td><select name="8.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="8.3" class="8.3"></td>
-                <td><input type="text" name="8.4" class="8.4"></td>
+          echo  </tr>
+          echo  <tr>
+          echo      <td>8</td>
+          echo      <td>10Day</td>
+           echo     <td>10D</td>
+          echo      <td>Risk Analysis meeting </td>
+          echo      <td>TEC </td>
+          echo      <td>Tech \ IE \ Mech </td>
+          echo      <td> <input type="text" name="8.1" class="8.1"></td>
+          echo      <td><select name="8.2">
+          echo          <option value="N/A">N/A</option>
+          echo          <option value="NO">NO</option>
+          echo          <option value="YES">YES</option>
+          echo      </select></td>
+          echo      <td><input type="date" name="8.3" class="8.3"></td>
+          echo      <td><input type="text" name="8.4" class="8.4"></td>
 
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>10Day</td>
-                <td>10D</td>
-                <td>Ensure all Critical Machines,Attachments,folders </td>
-                <td>M\C </td>
-                <td>Mechanic </td>
-                <td> <input type="text" name="9.1" class="9.1"></td>
-                <td><select name="9.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="9.3" class="9.3"></td>
-                <td><input type="text" name="9.4" class="9.4"></td>
+          echo  </tr>
+          echo  <tr>
+          echo      <td>9</td>
+          echo      <td>10Day</td>
+          echo      <td>10D</td>
+          echo      <td>Ensure all Critical Machines,Attachments,folders </td>
+          echo      <td>M\C </td>
+          echo      <td>Mechanic </td>
+          echo      <td> <input type="text" name="9.1" class="9.1"></td>
+          echo      <td><select name="9.2">
+          echo          <option value="N/A">N/A</option>
+          echo          <option value="NO">NO</option>
+          echo          <option value="YES">YES</option>
+          echo      </select></td>
+          echo      <td><input type="date" name="9.3" class="9.3"></td>
+          echo      <td><input type="text" name="9.4" class="9.4"></td>
 
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>10Day</td>
-                <td>10D</td>
-                <td>Pattern accuracy against the 2pcs </td>
-                <td>TEC</td>
+         echo   </tr>
+            echo    <tr>
+            echo    <td>10</td>
+            echo    <td>10Day</td>
+            echo    <td>10D</td>
+            echo    <td>Pattern accuracy against the 2pcs </td>
+            echo    <td>TEC</td>
+            echo    <td>Technician </td>
+            echo    <td> <input type="text" name="10.1" class="10.1"></td>
+            echo    <td><select name="10.2">
+            echo        <option value="N/A">N/A</option>
+            echo        <option value="NO">NO</option>
+            echo        <option value="YES">YES</option>
+            echo    </select></td>
+            echo    <td><input type="date" name="10.3" class="10.3"></td>
+            echo    <td><input type="text" name="10.4" class="10.4"></td>
+
+            echo </tr>
+            echo <tr>
+            echo    <td>11</td>
+            echo    <td>10Day</td>
+            echo    <td>10D & 9D</td>
+            echo    <td>2pcs complete </td>
+            echo    <td>TEC </td>
+            echo    <td>Technician </td>
+            echo    <td> <input type="text" name="11.1" class="11.1"></td>
+            echo    <td><select name="11.2">
+            echo         <option value="N/A">N/A</option>
+            echo        <option value="NO">NO</option>
+            echo        <option value="YES">YES</option>
+            echo    </select></td>
+            echo    <td><input type="date" name="11.3" class="11.3"></td>
+            echo    <td><input type="text" name="11.4" class="11.4"></td>
+
+            echo</tr>
+            echo<tr>
+            echo    <td>12</td>
+            echo    <td>9Day</td>
+            echo    <td>9D</td>
+            echo   <td>share the coments in conclusion meeting with development Team</td>
+            echo    <td>TEC </td>
                 <td>Technician </td>
-                <td> <input type="text" name="10.1" class="10.1"></td>
-                <td><select name="10.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="10.3" class="10.3"></td>
-                <td><input type="text" name="10.4" class="10.4"></td>
+            echo    <td> <input type="text" name="12.1" class="12.1"></td>
+            echo    <td><select name="12.2">
+                echo    <option value="N/A">N/A</option>
+                echo    <option value="NO">NO</option>
+                echo    <option value="YES">YES</option>
+               echo </select></td>
+               echo <td><input type="date" name="12.3" class="12.3"></td>
+               echo <td><input type="text" name="12.4" class="12.4"></td>
 
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>10Day</td>
-                <td>10D & 9D</td>
-                <td>2pcs complete </td>
-                <td>TEC </td>
-                <td>Technician </td>
-                <td> <input type="text" name="11.1" class="11.1"></td>
-                <td><select name="11.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="11.3" class="11.3"></td>
-                <td><input type="text" name="11.4" class="11.4"></td>
+            echo</tr>
+            echo<tr>
+            echo    <td>13</td>
+            echo    <td>9Day</td>
+            echo    <td>9D</td>
+            echo    <td>Identify critical operations\Critical attachments\folders\Preventive actions</td>
+            echo    <td>M\c </td>
+            echo    <td>Mechanics</td>
+            echo    <td> <input type="text" name="13.1" class="13.1"></td>
+            echo    <td><select name="13.2">
+            echo        <option value="N/A">N/A</option>
+            echo        <option value="NO">NO</option>
+            echo        <option value="YES">YES</option>
+            echo    </select></td>
+            echo    <td><input type="date" name="13.3" class="13.3"></td>
+            echo    <td><input type="text" name="13.4" class="13.4"></td>
 
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>9Day</td>
-                <td>9D</td>
-                <td>share the coments in conclusion meeting with development Team</td>
-                <td>TEC </td>
-                <td>Technician </td>
-                <td> <input type="text" name="12.1" class="12.1"></td>
-                <td><select name="12.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="12.3" class="12.3"></td>
-                <td><input type="text" name="12.4" class="12.4"></td>
+            echo</tr>
+           echo <tr>
+            echo    <td>14</td>
+            echo    <td>9Day</td>
+            echo    <td>9D</td>
+            echo    <td>ensure pattern accuracy (cut marks, shape, measurments, etc)</td>
+            echo    <td>TEC </td>
+            echo    <td>Pilot Evaluator(FN)</td>
+            echo    <td> <input type="text" name="14.1" class="14.1"></td>
+            echo    <td><select name="14.2">
+            echo      <option value="N/A">N/A</option>
+            echo    <option value="NO">NO</option>
+            echo    <option value="YES">YES</option>
+            echo  </select></td>
+            echo   <td><input type="date" name="14.3" class="14.3"></td>
+            echo   <td><input type="text" name="14.4" class="14.4"></td>
 
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>9Day</td>
-                <td>9D</td>
-                <td>Identify critical operations\Critical attachments\folders\Preventive actions</td>
-                <td>M\c </td>
-                <td>Mechanics</td>
-                <td> <input type="text" name="13.1" class="13.1"></td>
-                <td><select name="13.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="13.3" class="13.3"></td>
-                <td><input type="text" name="13.4" class="13.4"></td>
+            echo  </tr>
+            echo  <tr>
+            echo   <td>15</td>
+            echo   <td>9Day</td>
+            echo  <td>9D</td>
+            echo   <td>Handover meeting - to factory</td>
+            echo  <td>Dev</td>
+            echo  <td>Technician\dev</td>
+            echo   <td> <input type="text" name="15.1" class="15.1"></td>
+            echo   <td><select name="15.2">
+            echo   <option value="N/A">N/A</option>
+            echo  <option value="NO">NO</option>
+            echo   <option value="YES">YES</option>
+            echo  </select></td>
+            echo  <td><input type="date" name="15.3" class="15.3"></td>
+            echo    <td><input type="text" name="15.4" class="15.4"></td>
 
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>9Day</td>
-                <td>9D</td>
-                <td>ensure pattern accuracy (cut marks, shape, measurments, etc)</td>
-                <td>TEC </td>
-                <td>Pilot Evaluator(FN)</td>
-                <td> <input type="text" name="14.1" class="14.1"></td>
-                <td><select name="14.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="14.3" class="14.3"></td>
-                <td><input type="text" name="14.4" class="14.4"></td>
+            echo    </tr>
+            echo    <tr>
+            echo    <td>16</td>
+            echo    <td>8Day</td>
+            echo   <td>8D</td>
+            echo   <td>Fabric and trims in house</td>
+            echo   <td>STR</td>
+            echo   <td>Stores\Merchant</td>
+            echo    <td> <input type="text" name="16.1" class="16.1"></td>
+            echo    <td><select name="16.2">
+            echo      <option value="N/A">N/A</option>
+            echo      <option value="NO">NO</option>
+            echo      <option value="YES">YES</option>
+            echo    </select></td>
+            echo    <td><input type="date" name="16.3" class="16.3"></td>
+            echo     <td><input type="text" name="16.4" class="16.4"></td>
 
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>9Day</td>
-                <td>9D</td>
-                <td>Handover meeting - to factory</td>
-                <td>Dev</td>
-                <td>Technician\dev</td>
-                <td> <input type="text" name="15.1" class="15.1"></td>
-                <td><select name="15.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="15.3" class="15.3"></td>
-                <td><input type="text" name="15.4" class="15.4"></td>
+            echo   </tr>
+            echo   <tr>
+            echo   <td>17</td>
+            echo   <td>8Day</td>
+            echo   <td>8D</td>
+            echo   <td>Received material accuracy</td>
+            echo    <td>INS</td>
+            echo   <td>Fabric Inspection</td>
+            echo    <td> <input type="text" name="17.1" class="17.1"></td>
+            echo    <td><select name="17.2">
+            echo    <option value="N/A">N/A</option>
+            echo    <option value="NO">NO</option>
+            echo    <option value="YES">YES</option>
+            echo   </select></td>
+            echo    <td><input type="date" name="17.3" class="17.3"></td>
+            echo   <td><input type="text" name="17.4" class="17.4"></td>
 
-            </tr>
-            <tr>
-                <td>16</td>
-                <td>8Day</td>
-                <td>8D</td>
-                <td>Fabric and trims in house</td>
-                <td>STR</td>
-                <td>Stores\Merchant</td>
-                <td> <input type="text" name="16.1" class="16.1"></td>
-                <td><select name="16.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="16.3" class="16.3"></td>
-                <td><input type="text" name="16.4" class="16.4"></td>
+            echo   </tr>
+            echo   <tr>
+            echo   <td>18</td>
+            echo   <td>8Day</td>
+            echo   <td>8D</td>
+            echo   <td>STW,GSD & OBD PATTERN HANDOVER(RPM checking)</td>
+            echo   <td>IE </td>
+            echo   <td>COST IE</td>
+            echo   <td> <input type="text" name="18.1" class="18.1"></td>
+            echo   <td><select name="18.2">
+            echo   <option value="N/A">N/A</option>
+            echo    <option value="NO">NO</option>
+            echo   <option value="YES">YES</option>
+            echo   </select></td>
+            echo   <td><input type="date" name="18.3" class="18.3"></td>
+            echo    <td><input type="text" name="18.4" class="18.4"></td>
 
-            </tr>
-            <tr>
-                <td>17</td>
-                <td>8Day</td>
-                <td>8D</td>
-                <td>Received material accuracy</td>
-                <td>INS</td>
-                <td>Fabric Inspection</td>
-                <td> <input type="text" name="17.1" class="17.1"></td>
-                <td><select name="17.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="17.3" class="17.3"></td>
-                <td><input type="text" name="17.4" class="17.4"></td>
+            echo   </tr>
+            echo   <tr>
+            echo   <td>19</td>
+            echo   <td>8Day</td>
+            echo   <td>8D</td>
+            echo  <td>Fabric relaxing for - Pilot</td>
+            echo  <td>CUT </td>
+            echo   <td>Cutting</td>
+            echo   <td> <input type="text" name="19.1" class="19.1"></td>
+            echo   <td><select name="19.2">
+            echo   <option value="N/A">N/A</option>
+            echo    <option value="NO">NO</option>
+            echo     <option value="YES">YES</option>
+            echo   </select></td>
+            echo   <td><input type="date" name="19.3" class="19.3"></td>
+            echo   <td><input type="text" name="19.4" class="19.4"></td>
 
-            </tr>
-            <tr>
-                <td>18</td>
-                <td>8Day</td>
-                <td>8D</td>
-                <td>STW,GSD & OBD PATTERN HANDOVER(RPM checking)</td>
-                <td>IE </td>
-                <td>COST IE</td>
-                <td> <input type="text" name="18.1" class="18.1"></td>
-                <td><select name="18.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="18.3" class="18.3"></td>
-                <td><input type="text" name="18.4" class="18.4"></td>
+            echo   </tr>
+            echo   <tr>
+            echo   <td>20</td>
+            echo   <td>7Day</td>
+            echo   <td>7D</td>
+            echo   <td>PP meeting </td>
+            echo   <td>TEC </td>
+            echo   <td>Pilot Evaluator</td>
+            echo   <td> <input type="text" name="20.1" class="20.1"></td>
+            echo   <td><select name="20.2">
+            echo   <option value="N/A">N/A</option>
+            echo   <option value="NO">NO</option>
+            echo   <option value="YES">YES</option>
+            echo   </select></td>
+            echo   <td><input type="date" name="20.3" class="20.3"></td>
+            echo   <td><input type="text" name="20.4" class="20.4"></td>
 
-            </tr>
-            <tr>
-                <td>19</td>
-                <td>8Day</td>
-                <td>8D</td>
-                <td>Fabric relaxing for - Pilot</td>
-                <td>CUT </td>
-                <td>Cutting</td>
-                <td> <input type="text" name="19.1" class="19.1"></td>
-                <td><select name="19.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="19.3" class="19.3"></td>
-                <td><input type="text" name="19.4" class="19.4"></td>
+            echo   </tr>
+            echo  <tr>
+            echo    <td>21</td>
+            echo   <td>7Day</td>
+            echo   <td>7D</td>
+            echo   <td>Pilot cut complete</td>
+            echo    <td>CUT</td>
+            echo    <td>Cutting</td>
+            echo   <td> <input type="text" name="21.1" class="21.1"></td>
+            echo   <td><select name="21.2">
+            echo    <option value="N/A">N/A</option>
+            echo   <option value="NO">NO</option>
+            echo   <option value="YES">YES</option>
+            echo    </select></td>
+            echo   <td><input type="date" name="21.3" class="21.3"></td>
+            echo   <td><input type="text" name="21.4" class="21.4"></td>
 
-            </tr>
-            <tr>
-                <td>20</td>
-                <td>7Day</td>
-                <td>7D</td>
-                <td>PP meeting </td>
-                <td>TEC </td>
-                <td>Pilot Evaluator</td>
-                <td> <input type="text" name="20.1" class="20.1"></td>
-                <td><select name="20.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="20.3" class="20.3"></td>
-                <td><input type="text" name="20.4" class="20.4"></td>
+            echo   </tr>
+            echo   <tr>
+            echo    <td>22</td>
+            echo   <td>7Day</td>
+            echo   <td>7D</td>
+            echo  <td>Pilot Samples stitch\size set start</td>
+            echo  <td>TEC </td>
+            echo  <td>Technician</td>
+            echo   <td> <input type="text" name="22.1" class="22.1"></td>
+            echo   <td><select name="22.2">
+            echo    <option value="N/A">N/A</option>
+            echo    <option value="NO">NO</option>
+            echo    <option value="YES">YES</option>
+            echo   </select></td>
+            echo   <td><input type="date" name="22.3" class="22.3"></td>
+            echo    <td><input type="text" name="22.4" class="22.4"></td>
 
-            </tr>
-            <tr>
-                <td>21</td>
-                <td>7Day</td>
-                <td>7D</td>
-                <td>Pilot cut complete</td>
-                <td>CUT</td>
-                <td>Cutting</td>
-                <td> <input type="text" name="21.1" class="21.1"></td>
-                <td><select name="21.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="21.3" class="21.3"></td>
-                <td><input type="text" name="21.4" class="21.4"></td>
+            echo   </tr>
+            echo   <tr>
+            echo    <td>23</td>
+            echo    <td>7Day</td>
+            echo    <td>7D</td>
+            echo    <td>Planned styles material in house</td>
+            echo    <td>PLAN </td>
+            echo    <td>plan</td>
+            echo    <td> <input type="text" name="23.1" class="23.1"></td>
+            echo    <td><select name="23.2">
+            echo    <option value="N/A">N/A</option>
+            echo    <option value="NO">NO</option>
+            echo    <option value="YES">YES</option>
+            echo   </select></td>
+            echo    <td><input type="date" name="23.3" class="23.3"></td>
+            echo    <td><input type="text" name="23.4" class="23.4"></td>
 
-            </tr>
-            <tr>
-                <td>22</td>
-                <td>7Day</td>
-                <td>7D</td>
-                <td>Pilot Samples stitch\size set start</td>
-                <td>TEC </td>
-                <td>Technician</td>
-                <td> <input type="text" name="22.1" class="22.1"></td>
-                <td><select name="22.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="22.3" class="22.3"></td>
-                <td><input type="text" name="22.4" class="22.4"></td>
+            echo   </tr>
+            echo   <tr>
+            echo     <td>24</td>
+            echo   <td>6Day</td>
+            echo   <td>6D</td>
+            echo  <td>Floor layout & product flow directions(Format STAT-F5)</td>
+            echo   <td>IE</td>
+            echo   <td>IE</td>
+            echo   <td> <input type="text" name="24.1" class="24.1"></td>
+            echo   <td><select name="24.2">
+            echo    <option value="N/A">N/A</option>
+            echo    <option value="NO">NO</option>
+            echo    <option value="YES">YES</option>
+            echo    </select></td>
+            echo    <td><input type="date" name="24.3" class="24.3"></td>
+            echo   <td><input type="text" name="24.4" class="24.4"></td>
+            echo  </tr>
+            echo  <tr>
+            echo   <td>25</td>
+            echo    <td>6Day</td>
+            echo   <td>6D</td>
+            echo   <td>Issue-machine requirment</td>
+            echo    <td>IE</td>
+            echo   <td>IE</td>
+            echo   <td> <input type="text" name="25.1" class="25.1"></td>
+            echo   <td><select name="25.2">
+            echo     <option value="N/A">N/A</option>
+            echo    <option value="NO">NO</option>
+            echo     <option value="YES">YES</option>
+            echo    </select></td>
+            echo    <td><input type="date" name="25.3" class="25.3"></td>
+            echo    <td><input type="text" name="25.4" class="25.4"></td>
 
-            </tr>
-            <tr>
-                <td>23</td>
-                <td>7Day</td>
-                <td>7D</td>
-                <td>Planned styles material in house</td>
-                <td>PLAN </td>
-                <td>plan</td>
-                <td> <input type="text" name="23.1" class="23.1"></td>
-                <td><select name="23.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="23.3" class="23.3"></td>
-                <td><input type="text" name="23.4" class="23.4"></td>
+            echo </tr>
+            echo  <tr>
+            echo  <td>26</td>
+            echo  <td>6Day</td>
+            echo  <td>6D</td>
+            echo  <td>Name Allocation with operator Grading</td>
+            echo  <td>IE</td>
+            echo  <td>IE\Sup\QA\MC\Tech</td>
+            echo  <td> <input type="text" name="26.1" class="26.1"></td>
+            echo <td><select name="26.2">
+            echo  <option value="N/A">N/A</option>
+            echo  <option value="NO">NO</option>
+            echo  <option value="YES">YES</option>
+            echo </select></td>
+            echo <td><input type="date" name="26.3" class="26.3"></td>
+            echo <td><input type="text" name="26.4" class="26.4"></td>
 
-            </tr>
-            <tr>
-                <td>24</td>
-                <td>6Day</td>
-                <td>6D</td>
-                <td>Floor layout & product flow directions(Format STAT-F5)</td>
-                <td>IE</td>
-                <td>IE</td>
-                <td> <input type="text" name="24.1" class="24.1"></td>
-                <td><select name="24.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="24.3" class="24.3"></td>
-                <td><input type="text" name="24.4" class="24.4"></td>
-            </tr>
-            <tr>
-                <td>25</td>
-                <td>6Day</td>
-                <td>6D</td>
-                <td>Issue-machine requirment</td>
-                <td>IE</td>
-                <td>IE</td>
-                <td> <input type="text" name="25.1" class="25.1"></td>
-                <td><select name="25.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="25.3" class="25.3"></td>
-                <td><input type="text" name="25.4" class="25.4"></td>
+            echo </tr>
+            echo <tr>
+                echo <td>27</td>
+               echo  <td>6Day</td>
+                echo <td>6D</td>
+                echo   <td>plan-Focus training Plan & start training for critical operations(Format STAT-F6)</td>
+                echo  <td>TEC </td>
+                echo    <td>Technician</td>
+                echo    <td> <input type="text" name="27.1" class="27.1"></td>
+                echo <td><select name="27.2">
+                echo       <option value="N/A">N/A</option>
+                echo        <option value="NO">NO</option>
+                echo     <option value="YES">YES</option>
+                echo  </select></td>
+                echo  <td><input type="date" name="27.3" class="27.3"></td>
+                echo  <td><input type="text" name="27.4" class="27.4"></td>
 
-            </tr>
-            <tr>
-                <td>26</td>
-                <td>6Day</td>
-                <td>6D</td>
-                <td>Name Allocation"with operator Grading</td>
-                <td>IE</td>
-                <td>IE\Sup\QA\MC\Tech</td>
-                <td> <input type="text" name="26.1" class="26.1"></td>
-                <td><select name="26.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="26.3" class="26.3"></td>
-                <td><input type="text" name="26.4" class="26.4"></td>
+                echo </tr>
+                echo  <tr>
+                echo  <td>28</td>
+                echo  <td>6Day</td>
+                echo  <td>6D</td>
+                echo  <td>Cut pannels from similar fabricsfor Focus training</td>
+                echo  <td>PROD</td>
+                echo  <td>Production\Cutting manager</td>
+                echo  <td> <input type="text" name="28.1" class="28.1"></td>
+                echo  <td><select name="28.2">
+                echo  <option value="N/A">N/A</option>
+                echo  <option value="NO">NO</option>
+                echo  <option value="YES">YES</option>
+                echo  </select></td>
+                echo  <td><input type="date" name="28.3" class="28.3"></td>
+                echo  <td><input type="text" name="28.4" class="28.4"></td>
 
-            </tr>
-            <tr>
-                <td>27</td>
-                <td>6Day</td>
-                <td>6D</td>
-                <td>plan-Focus training Plan & start training for critical operations(Format STAT-F6)</td>
-                <td>TEC </td>
-                <td>Technician</td>
-                <td> <input type="text" name="27.1" class="27.1"></td>
-                <td><select name="27.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="27.3" class="27.3"></td>
-                <td><input type="text" name="27.4" class="27.4"></td>
-
-            </tr>
-            <tr>
-                <td>28</td>
-                <td>6Day</td>
-                <td>6D</td>
-                <td>Cut pannels from similar fabricsfor Focus training</td>
-                <td>PROD</td>
-                <td>Production\Cutting manager</td>
-                <td> <input type="text" name="28.1" class="28.1"></td>
-                <td><select name="28.2">
-                    <option value="N/A">N/A</option>
-                    <option value="NO">NO</option>
-                    <option value="YES">YES</option>
-                </select></td>
-                <td><input type="date" name="28.3" class="28.3"></td>
-                <td><input type="text" name="28.4" class="28.4"></td>
-
-            </tr>
-            <tr>
-                <td>29</td>
-                <td>6Day</td>
-                <td>6D</td>
-                <td>Are critical machines, folders ,attachments Set for the bulk</td>
+                echo  </tr>
+                echo  <tr>
+                echo  <td>29</td>
+                echo <td>6Day</td>
+                echo <td>6D</td>
+                echo <td>Are critical machines, folders ,attachments Set for the bulk</td>
                 <td>M\C</td>
                 <td>Mechanic</td>
                 <td> <input type="text" name="29.1" class="29.1"></td>
@@ -2246,9 +2246,10 @@
             </tr>
         </table>
     
-        <input type="submit" name="update" class="update" value="Update"> 
-    </form>
+    <a href="home.php" ><button type="button"  class="dashboardbtn1">Back</button></a>
+    <a href="update.php" ><button type="button"  class="dashboardbtn2">Update </button></a>
+    </form>   
 
-    
+    ?/
 </body>
 </html>
