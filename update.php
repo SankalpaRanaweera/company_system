@@ -194,7 +194,7 @@
             <td>method video</td>
             <td>IE</td>
             <td>COST IE \G.TECH</td>
-            <td><input type="text" name="7.1" class="7.1" /></td>
+            <td><input type="text" name="7.1" class="7.1"/></td>
             <td>
               <select name="7.2">
                 <option value="N/A">N/A</option>
