@@ -116,7 +116,7 @@ border-radius:10px;
 
     width: 500px;
     height:50px;
-    margin-left: 133px;
+    margin-left: 150px;
     margin-top: 25px;
     font-size: 30px;
 
@@ -137,7 +137,7 @@ border-radius:10px;
 
 .l3 {
     font-size: 50px;
-    margin-left: 177px;
+    margin-left: 180px;
   
 
 }
@@ -148,6 +148,23 @@ border-radius:10px;
     margin-left: 255px;
     margin-top: 50px;
     font-size: 30px;
+}
+.scripttable{
+     margin-left: auto;
+     margin-right: auto;
+     width: 300px;
+     height: 500px;
+
+}
+
+.scripttd4{
+    
+    background-color: gray;
+}
+
+.scripttd5{
+    
+    background-color: gray;
 
 
 }

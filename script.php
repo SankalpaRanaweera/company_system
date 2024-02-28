@@ -97,18 +97,17 @@ function executeSearchQueries($con)
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Document</title>
+        <link href='allcss.css' rel='stylesheet' type='text/css'/>
     </head>
-    <body>
-    <table border=1>";
+    <body bgcolor='gray'>
+    <table border=2 class='scripttable'>";
     while ($row = $res->fetch_assoc()) {
         echo "
         <tr>
-        <td>" . $row['Year and Month'] . "</td>
-        <td>" . $row['Team_no'] . "</td>
-        <td>" . $row['Style_no'] . "</td>
-        <td>" . $row['factory'] . "</td>
-        <td><a href='./update.php?id=" . $row['id'] . "&request=update'><button>Update Button</button></a></td>
-        <td><a href='./delete.php?id=" . $row['id'] . "&request=delete'><button>Delete Button</button></a></td>
+        <td class='scripttd1'>" . $row['factory'] . "</td>
+        <td class='scripttd2'>" . $row['Team_no'] . "</td>
+        <td class='scripttd3'>" . $row['Style_no'] . "</td>
+        <td class='scripttd4'><a href='./update.php?id=" . $row['id'] . "&request=update'><button >Update Button</button></a></td>
         </tr>";
     }
     // Close the statement and the connection
