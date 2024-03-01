@@ -86,7 +86,7 @@ function executeSearchQueries($con)
     if ($factory == '' && $teamNum == '' && $styleNum == '')
         $stmt = $con->prepare("SELECT * FROM data ORDER BY id DESC LIMIT 20");
     else {
-        $stmt = $con->prepare("SELECT * from `data` where Team_no=? or Style_no=? or factory=?");
+        $stmt = $con->prepare("SELECT * from `data` where Team_no=? and Style_no=? and factory=?");
         $stmt->bind_param("sss", $teamNum, $styleNum, $factory);
     }
     $stmt->execute();
@@ -107,9 +107,11 @@ function executeSearchQueries($con)
         <td class='scripttd1'>" . $row['factory'] . "</td>
         <td class='scripttd2'>" . $row['Team_no'] . "</td>
         <td class='scripttd3'>" . $row['Style_no'] . "</td>
-        <td class='scripttd4'><a href='./update.php?id=" . $row['id'] . "&request=update'><button >Update Button</button></a></td>
+        <td class='scripttd4'><a href='./update.php?id=" . $row['id'] . "&request=update'><button class='script4'>Update</button></a></td>
+        <td class='scripttd5'><a href='./delete.php?id=" . $row['id'] . "&request=Delete'><button  class='script5'>Delete</button></a></td>
         </tr>";
     }
+    echo" </body> </html>";
     // Close the statement and the connection
     $stmt->close();
     $con->close();

@@ -150,21 +150,69 @@ border-radius:10px;
     font-size: 30px;
 }
 .scripttable{
-     margin-left: auto;
-     margin-right: auto;
-     width: 300px;
-     height: 500px;
+     width:800px ;
+     height:100px ;
+    background-color:black;
 
+}
+
+.script4{
+    background-color: rgb(134, 128, 133);
+    width:100px;
+    height: 50px;
+}
+
+.script5{
+    
+    background-color: rgb(134, 128, 133);
+    width:100px;
+    height: 50px;
+}
+
+.scripttd1{
+    
+    width:100px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    background-color: bisque;
+}
+
+
+.scripttd2{
+    
+    width:100px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    background-color: bisque;
+}
+
+.scripttd3{
+    
+    width:100px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    background-color: bisque;
 }
 
 .scripttd4{
     
-    background-color: gray;
+    width:100px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    background-color: bisque;
 }
-
 .scripttd5{
     
     background-color: gray;
-
-
+    width:100px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    background-color: bisque;
 }
+
+
