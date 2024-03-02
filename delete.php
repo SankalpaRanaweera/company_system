@@ -1,7 +1,7 @@
 <?php
 include('./dbconnection.php');
 $id=$_GET['id'];
-$sql = "DELETE FROM stat crew WHERE id='$id' ";
+$sql = "DELETE FROM data WHERE id='$id' ";
 $res = mysqli_query($con,$sql);
 if($res) {
     header ('location:home.php');
