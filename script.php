@@ -100,6 +100,7 @@ function executeSearchQueries($con)
         <link href='allcss.css' rel='stylesheet' type='text/css'/>
     </head>
     <body bgcolor='gray'>
+    
     <table border=2 class='scripttable'>";
     while ($row = $res->fetch_assoc()) {
         echo "
@@ -116,6 +117,7 @@ function executeSearchQueries($con)
     $stmt->close();
     $con->close();
 }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['add'])) {
         executeAddQueries($con);

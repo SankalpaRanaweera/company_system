@@ -56,7 +56,8 @@
                     <option value="N/A">N/A</option>
                     <option value="NO">NO</option>
                     <option value="YES">YES</option>
-                </select></td>
+                </select>
+                </td>
                 <td><input type="date" name="1.3" class="1.3"></td>
                 <td><input type="text" name="1.4" class="1.4"></td>
 

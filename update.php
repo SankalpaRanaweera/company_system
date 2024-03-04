@@ -2879,7 +2879,7 @@
 </select>
 </td>
 <td><input type="date" name="127.3" class="127.3" value="<?php echo $data->data[126]->Date ?>" /></td>
-<td><input type="text" name="127.4" class="127.4" value="<?php echo $data->data[126]->{'Root cause'} ?>" /></td>
+<td><input type="text" name="127.4" class="127.4" value="<?php echo $data->data[126]->{'Root cause'} ?>"/></td>
           </tr>
         </table>
 
