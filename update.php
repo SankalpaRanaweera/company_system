@@ -2887,8 +2887,8 @@
       </form>
     </body>
 
-    </html>
-    <?php
+ </html>
+ <?php
       }
     }
     ?>
