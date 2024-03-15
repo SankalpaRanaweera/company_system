@@ -18,7 +18,7 @@ function executeAddQueries($con)
     // Second SQL query
     $stmt = $con->prepare("UPDATE data SET Activity_data = ? WHERE id='$id1'");
     $data = [];
-    for ($i = 1; $i <= 127; $i++) {
+    for ($i = 1; $i <= 128; $i++) {
         // Insert 4 values
         // $value = "$i.$j";
         $json = json_encode((object) null);
@@ -51,7 +51,7 @@ function executeUpdateQueries($con)
     // Second SQL query
     $stmt = $con->prepare("UPDATE data SET Activity_data = ? WHERE id='$id2'");
     $data = [];
-    for ($i = 1; $i <= 127; $i++) {
+    for ($i = 1; $i <= 128; $i++) {
         // Insert 4 values
         // $value = "$i.$j";
         $json = json_encode((object) null);
