@@ -21,15 +21,15 @@
         <input type="text" name="qcd" class="f4"><br><br>
         <lable>Product Basket</lable>
         <select name="PB" class="f8">
-             <option value="a">a</option>
-             <option value="a">a</option>
-             <option value="a">a</option>
+             <option value="YES">YES</option>
+             <option value="NO">NO</option>
+            
         </select>
         <br><br>
         <label>Chassies</label>
-        <input type="text" name="chasy1" class="f5">
-        <input type="text" name="chasy2" class="f6">
-        <input type="text" name="chasy3" class="f7">
+        <input type="number"  id="numerator" name="chasy1" placeholder="Operation" class="f5">
+        <input type="number" id="denominator"  name="chasy2"  placeholder="New operation" class="f6">
+        <input type="text"  id="result" name="chasy3" class="f7" readonly>
         <table border="1">
             <tr>
                 <th>Number</th>

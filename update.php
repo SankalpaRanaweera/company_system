@@ -39,15 +39,14 @@
           <option selected value="<?php echo $row['Peoduct_basket'] ?>">
             <?php echo $row['Peoduct_basket'] ?>
           </option>
-          <option value="a">a</option>
-          <option value="a">a</option>
-          <option value="a">a</option>
+          <option value="YES">YES</option>
+          <option value="NO">NO</option>
         </select>
         <br /><br />
         <label>Chassies</label>
-        <input type="text" name="chasy1" class="f5" value="<?php echo $row['Chassies_operations'] ?>" />
-        <input type="text" name="chasy2" class="f6" value="<?php echo $row['Chassies_new_operations'] ?>" />
-        <input type="text" name="chasy3" class="f7" value="<?php echo $row['Chassies_precentage'] ?>" />
+        <input type="number" id="numerator" name="chasy1"  placeholder="Operation" class="f5" value="<?php echo $row['Chassies_operations'] ?>" />
+        <input type="number" id="denominator" name="chasy2" placeholder="New operation" class="f6" value="<?php echo $row['Chassies_new_operations'] ?>" />
+        <input type="text"  id="result" name="chasy3" class="f7" readonly value="<?php echo $row['Chassies_precentage'] ?>" />
         <table border="1">
           <tr>
             <th>Number</th>
