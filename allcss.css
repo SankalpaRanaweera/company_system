@@ -30,20 +30,20 @@
 
 .divimg1 {
 
-    width: 1400px;
+    width: 200px;
     height: 100px;
     margin: -10px;
    
 }
-.img1 {
+ /* .img1 {
 
-    width: 1400px;
+    width: 400px;
     height: 100px;
-    object-fit:unset;
+    object-fit:unset; 
     
 
 
-}
+}  */
 .f1{
     
     margin-left: 100px;

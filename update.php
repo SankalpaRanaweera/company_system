@@ -47,6 +47,28 @@
         <input type="number" id="numerator" name="chasy1"  placeholder="Operation" class="f5" value="<?php echo $row['Chassies_operations'] ?>" />
         <input type="number" id="denominator" name="chasy2" placeholder="New operation" class="f6" value="<?php echo $row['Chassies_new_operations'] ?>" />
         <input type="text"  id="result" name="chasy3" class="f7" readonly value="<?php echo $row['Chassies_precentage'] ?>" />
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const numeratorInput = document.getElementById("numerator");
+      const denominatorInput = document.getElementById("denominator");
+      const resultInput = document.getElementById("result");
+
+      function calculateDivision() {
+        const numerator = parseFloat(numeratorInput.value);
+        const denominator = parseFloat(denominatorInput.value);
+
+        if (denominator !== 0) {
+          const result = numerator / denominator;
+          resultInput.value = result.toFixed(2);
+        } else {
+          resultInput.value = "Error: Division by zero";
+        }
+      }
+
+      numeratorInput.addEventListener("input", calculateDivision);
+      denominatorInput.addEventListener("input", calculateDivision);
+    });
+  </script>
         <table border="1">
           <tr>
             <th>Number</th>

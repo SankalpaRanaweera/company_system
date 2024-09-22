@@ -11,16 +11,15 @@ function executeAddQueries($con)
     $result = $stmt->get_result();
     $number = $result->fetch_assoc();
     $id1 = $number['id'] + 1;
-    // First SQL query
+    
     $stmt = $con->prepare("INSERT INTO data (Team_no, Style_no, Production_start_date, QCD, Peoduct_basket,Chassies_operations,Chassies_new_operations,Chassies_precentage,factory) VALUES (?, ?, ?, ?, ?,?,?,?,?)");
     $stmt->bind_param("sssssssss", $_POST['teamnum'], $_POST['stylenum'], $_POST['startdate'], $_POST['qcd'], $_POST['PB'], $_POST['chasy1'], $_POST['chasy2'], $_POST['chasy3'], $_POST['factory']);
     $stmt->execute();
-    // Second SQL query
+    
     $stmt = $con->prepare("UPDATE data SET Activity_data = ? WHERE id='$id1'");
     $data = [];
     for ($i = 1; $i <= 128; $i++) {
-        // Insert 4 values
-        // $value = "$i.$j";
+        
         $json = json_encode((object) null);
         $element = json_decode($json);
         $element->No = $i;
@@ -28,7 +27,7 @@ function executeAddQueries($con)
         $element->Activity = $_POST[$i . '_2'];
         $element->Date = $_POST[$i . '_3'];
         $element->{'Root cause'} = $_POST[$i . '_4'];
-        // $newjson = json_encode($element);
+    
         array_push($data, $element);
 
     }
