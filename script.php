@@ -5,7 +5,6 @@ error_reporting(E_ALL);
 
 function executeAddQueries($con)
 {
-    //find the next id
     $stmt = $con->prepare("SELECT id from data ORDER BY id desc LIMIT 1;");
     $stmt->execute();
     $result = $stmt->get_result();
